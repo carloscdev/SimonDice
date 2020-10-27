@@ -6,16 +6,11 @@
     &__contenedor {
         img {
             width: 5vw;
-        }
-        h1, h2{
-            color: white;
-            font-size: 2vw;
-            margin-left: 1vw;
         } 
         width: 90%;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 0.6fr;
         &--logo{
             display: flex;
             align-items: center;
@@ -26,5 +21,13 @@
             justify-self: right;
         }
         
+    }
+    @media only screen and (max-device-width: 768px){
+        &__contenedor {
+            padding-top: 10vw;
+            img {
+                width: 10vw;
+            }      
+        }
     }
 }

@@ -4,7 +4,8 @@ const naranja = document.getElementById("naranja");
 const verde = document.getElementById("verde");
 const btnEmpezar = document.getElementById("btnEmpezar");
 const gameboard = document.getElementById("gameboard");
-const ULTIMO_NIVEL = 10;
+const nombre_user = document.getElementById("nombre_user");
+let ULTIMO_NIVEL = 10;
 
 let puntuacion = document.getElementById("puntos");
 puntuacion.innerHTML = 0;
@@ -114,10 +115,9 @@ class Juego {
           puntuacion.innerHTML = 0;
         } else {
           puntuacion.innerHTML++;
-          if (this.nivel < 4) {
+          if (this.nivel < 7) {
             this.mensaje = "Eso estuvo fácil";
-          }
-          if (this.nivel < 8) {
+          } else if (this.nivel < 10) {
             this.mensaje = "Sigue así";
           } else {
             this.mensaje = "Estás muy cerca";
@@ -154,4 +154,21 @@ class Juego {
 function empezarJuego() {
   gameboard.classList.remove("girar");
   window.juego = new Juego();
+}
+function empezar() {
+  const nombres = document.getElementById("nombre").value;
+  let nivel = document.getElementById("dificultad").value;
+  if (nombres != "") {
+    nombre_user.innerHTML = nombres;
+  } else {
+    nombre_user.innerHTML = "Usuario";
+  }
+  if (nivel == "facil") {
+    ULTIMO_NIVEL = 6;
+  } else if (nivel == "medio") {
+    ULTIMO_NIVEL = 9;
+  } else {
+    ULTIMO_NIVEL = 12;
+  }
+  document.getElementById("inicio").classList.add("hide");
 }

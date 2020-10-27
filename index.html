@@ -6,11 +6,24 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <section class="inicio" id="inicio">
+      <h1>SIMON DICE</h1>
+      <form action="" id="form">
+        <input type="text" maxlength="10" placeholder="Nombre" name="nombre" id="nombre">
+        <select name="dificultad" id="dificultad">
+          <option required hidden selected>Dificultad</option>
+          <option value="facil">Fácil</option>
+          <option value="medio">Medio</option>
+          <option value="dificil">Dificil</option>
+      </select>
+      <button class="empezar sombra pulse" onclick="empezar()" type="button">JUGAR</button>
+      </form>
+    </section>
     <header class="navbar">
       <nav class="navbar__contenedor">
         <div class="navbar__contenedor--logo">
           <img src="./img/icon.png" alt="Logo Juego">
-          <h1>SIMON DICE</h1>          
+          <h2 id="nombre_user">Usuario</h2>          
         </div>
         <div class="navbar__contenedor--puntos">
           <h2> NIVEL <span id="puntos">0</span></h2>
