@@ -24,10 +24,7 @@ h2, h3 {
   color: white;
   font-size: 2vw;
   margin-left: 1vw;
-  font-weight: 00; }
-  @media only screen and (max-device-width: 768px) {
-    h2 h1, h2 h2, h3 h1, h3 h2 {
-      font-size: 5vw; } }
+  font-weight: 700; }
 
 .gameboard {
   height: 50vw;
