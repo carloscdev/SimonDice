@@ -1,0 +1,112 @@
+* {
+  font-family: Arial, Helvetica, sans-serif; }
+
+body {
+  margin: 0;
+  background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, #04bde4 0%, #0253b9 100.2%);
+  display: flex;
+  align-items: center;
+  height: 100vh; }
+
+.gameboard {
+  height: 80vh;
+  width: 80vh;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  max-height: 70vh;
+  max-width: 70vh; }
+
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block; }
+
+.left {
+  float: left; }
+
+.right {
+  float: left; }
+
+.girar {
+  animation: spin 4s linear infinite; }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.celeste {
+  background: #FE3267;
+  cursor: pointer; }
+
+.celeste.light {
+  background: #ff658e; }
+
+.violeta {
+  background: #551BF9;
+  cursor: pointer; }
+
+.violeta.light {
+  background: #7d51f7; }
+
+.naranja {
+  background: #FFD300;
+  cursor: pointer; }
+
+.naranja.light {
+  background: #ffe667; }
+
+.verde {
+  background: #00DE89;
+  cursor: pointer; }
+
+.verde.light {
+  background: #7affcc; }
+
+.btn-start {
+  width: 400px;
+  height: 100px;
+  background: white;
+  border: none;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 200px);
+  border-radius: 10px;
+  transition: all 400ms ease;
+  cursor: pointer; }
+  .btn-start:hover {
+    transform: scale(0.9);
+    background: rgba(255, 255, 255, 0.8); }
+
+.hide {
+  display: none; }
+
+.sombra {
+  box-shadow: -10px 10px 5px -8px rgba(0, 0, 0, 0.31); }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; }
+  .navbar__contenedor {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .navbar__contenedor img {
+      width: 5vw; }
+    .navbar__contenedor h1, .navbar__contenedor h2 {
+      color: white;
+      font-size: 2vw;
+      margin-left: 1vw; }
+    .navbar__contenedor--logo {
+      display: flex;
+      align-items: center; }
+    .navbar__contenedor--puntos {
+      display: flex;
+      align-items: center;
+      justify-self: right; }

@@ -1,0 +1,30 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    &__contenedor {
+        img {
+            width: 5vw;
+        }
+        h1, h2{
+            color: white;
+            font-size: 2vw;
+            margin-left: 1vw;
+        } 
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &--logo{
+            display: flex;
+            align-items: center;
+        }
+        &--puntos{            
+            display: flex;
+            align-items: center;
+            justify-self: right;
+        }
+        
+    }
+}
